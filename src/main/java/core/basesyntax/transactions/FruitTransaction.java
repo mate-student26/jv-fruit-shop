@@ -21,7 +21,6 @@ public class FruitTransaction {
     public FruitTransaction setFruit(String fruit) {
         this.fruit = fruit;
         return this;
-
     }
 
     public int getQuantity() {

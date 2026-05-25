@@ -39,7 +39,7 @@ public class StorageImpl implements Storage {
         if (current >= quantity) {
             transactions.put(fruit, current - quantity);
         } else {
-            throw new IllegalArgumentException("Current value is lower than quantity");
+            throw new RuntimeException("Current value is lower than quantity");
         }
     }
 }
