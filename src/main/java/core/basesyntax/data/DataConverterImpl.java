@@ -13,6 +13,10 @@ public class DataConverterImpl implements DataConverter {
         for (int i = 1; i < inputReport.size(); i++) {
             String line = inputReport.get(i);
             String[] parts = line.split(",");
+            if (parts.length < 3) {
+                throw new RuntimeException("Invalid line format: " + line);
+            }
+
             String operationCode = parts[0];
             String fruit = parts[1];
             int quantity = Integer.parseInt(parts[2]);
